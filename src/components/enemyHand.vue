@@ -1,12 +1,12 @@
 <template>
-  <div class="game">
-
+  <div class="enemy-hand">
+      EnemyHand
   </div>
 </template>
 
 <script>
 export default {
-  name: "Game",
+  name: "EnemyHand",
 };
 </script>
 

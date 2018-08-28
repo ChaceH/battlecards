@@ -11,12 +11,19 @@ let gameApi = Axios.create({
 
 export default new Vuex.Store({
   state: {
-    cards: []
+    game: {}
   },
   mutations: {
-
+    setGame(state, data){
+      state.game = data
+    }
   },
   actions: {
-
+    startGame({commit, dispatch}, newGame){
+      gameApi.post('', {gameConfig:newGame})
+      .then(res => {
+        commit('setGame', res.data)
+      })
+    }
   }
 })
